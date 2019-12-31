@@ -1,22 +1,22 @@
 package com.example.android.quakereport;
 
 public class earthquake {
-
-
-    private String intensity;
+    private String url;
+    private double intensity;
     private String location;
     private long timeInMilliseconds;
 
-    public earthquake(String intensity,String location,long date){
+    public earthquake(double intensity, String location, long date, String url){
         this.intensity=intensity;
         this.location=location;
         this.timeInMilliseconds=date;
+        this.url=url;
     }
-    public String getIntensity() {
+    public double getIntensity() {
         return intensity;
     }
 
-    public void setIntensity(String intensity) {
+    public void setIntensity(double intensity) {
         this.intensity = intensity;
     }
 
@@ -35,5 +35,14 @@ public class earthquake {
     public void setDate(long date) {
         this.timeInMilliseconds = date;
     }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
 
 }
